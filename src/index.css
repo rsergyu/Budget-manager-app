@@ -1,0 +1,375 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.app-container.light-mode {
+  background-color: white;
+}
+
+.app-container.dark-mode {
+  background-color: #444;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.input-group input.light-mode,
+.input-group select.light-mode {
+  background-color: white;
+  color: #333;
+}
+
+.input-group input.dark-mode,
+.input-group select.dark-mode {
+  background-color: #555;
+  color: #f0f0f0;
+}
+
+button {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+.transaction-list {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.transaction-item {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.transaction-item.light-mode {
+  background-color: #f9f9f9;
+}
+
+.transaction-item.dark-mode {
+  background-color: #555;
+}
+
+.transaction-item span {
+  margin-right: 10px;
+}
+
+.transaction-item button {
+  background-color: #f44336;
+  color: white;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.transaction-item button:hover {
+    background-color: #d32f2f;
+}
+
+.total {
+  margin-top: 20px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-container.light-mode {
+  background-color: white;
+}
+
+.auth-container.dark-mode {
+  background-color: #444;
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-container .input-group {
+  margin-bottom: 15px;
+}
+
+.auth-container .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.auth-container .input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-container .input-group input.light-mode {
+  background-color: white;
+  color: #333;
+}
+
+.auth-container .input-group input.dark-mode {
+  background-color: #555;
+  color: #f0f0f0;
+}
+
+.auth-container button {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #4cae4c;
+}
+
+.auth-container .error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+.transaction-item .delete-button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.transaction-item .delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.transaction-item span {
+    flex: 1;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter-container input,
+.filter-container select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-container input.light-mode,
+.filter-container select.light-mode {
+    background-color: white;
+    color: #333;
+}
+
+.filter-container input.dark-mode,
+.filter-container select.dark-mode {
+    background-color: #555;
+    color: #f0f0f0;
+}
+
+.budget-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.budget-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.budget-input label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.budget-input input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.budget-input input.light-mode {
+    background-color: white;
+    color: #333;
+}
+
+.budget-input input.dark-mode {
+    background-color: #555;
+    color: #f0f0f0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #5cb85c;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.category-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.category-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 100px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-icon.light-mode {
+    background-color: white;
+    color: #333;
+}
+
+.category-icon.dark-mode {
+    background-color: #555;
+    color: #f0f0f0;
+}
+
+.category-icon svg {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
